@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>白家老鹅坊 · 全案运营方案</title>
+    <title>白家老鹅坊 · 全案运营方案（修订合规版）</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
         
@@ -16,7 +16,6 @@
             line-height: 1.8;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(135deg, #0d0d0d 0%, #1a120e 40%, #2d1f14 100%);
@@ -28,286 +27,157 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: 
-                radial-gradient(ellipse at 20% 50%, rgba(139, 90, 43, 0.15) 0%, transparent 50%),
+            background: radial-gradient(ellipse at 20% 50%, rgba(139, 90, 43, 0.15) 0%, transparent 50%),
                 radial-gradient(ellipse at 80% 50%, rgba(180, 120, 60, 0.1) 0%, transparent 50%);
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
+        .hero-content { position: relative; z-index: 1; }
         .hero-badge {
-            display: inline-block;
-            padding: 8px 24px;
+            display: inline-block; padding: 8px 24px;
             border: 1px solid rgba(180, 120, 60, 0.3);
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: #b4783c;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
+            border-radius: 50px; font-size: 0.85rem;
+            color: #b4783c; letter-spacing: 3px;
+            margin-bottom: 30px; backdrop-filter: blur(10px);
         }
-
         .hero h1 {
             font-family: 'Noto Serif SC', serif;
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: #f0e6d0;
-            margin-bottom: 10px;
-            letter-spacing: 8px;
+            font-size: 4.5rem; font-weight: 900;
+            color: #f0e6d0; margin-bottom: 10px; letter-spacing: 8px;
         }
-
         .hero .subtitle {
-            font-size: 1.3rem;
-            color: #b4783c;
-            letter-spacing: 6px;
-            margin-bottom: 40px;
-            font-weight: 300;
+            font-size: 1.3rem; color: #b4783c;
+            letter-spacing: 6px; margin-bottom: 40px; font-weight: 300;
         }
-
         .hero .slogan {
-            font-size: 1.5rem;
-            color: #c4a882;
-            font-style: italic;
-            letter-spacing: 3px;
+            font-size: 1.5rem; color: #c4a882; font-style: italic; letter-spacing: 3px;
             border-top: 1px solid rgba(180, 120, 60, 0.2);
             border-bottom: 1px solid rgba(180, 120, 60, 0.2);
-            padding: 20px 40px;
-            display: inline-block;
+            padding: 20px 40px; display: inline-block;
         }
-
+        .version-tag {
+            position: absolute; top: 30px; right: 30px;
+            background: rgba(180, 120, 60, 0.15);
+            border: 1px solid rgba(180, 120, 60, 0.3);
+            border-radius: 6px; padding: 6px 16px;
+            font-size: 0.75rem; color: #b4783c; letter-spacing: 1px;
+            z-index: 2;
+        }
         .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #8b7a6a;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
+            position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+            color: #8b7a6a; font-size: 0.8rem; letter-spacing: 2px;
             animation: bounce 2s infinite;
         }
-
         @keyframes bounce {
             0%, 100% { transform: translateX(-50%) translateY(0); }
             50% { transform: translateX(-50%) translateY(10px); }
         }
 
-        /* Navigation */
         .nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            position: sticky; top: 0; z-index: 100;
             background: rgba(26, 26, 26, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
             padding: 0 20px;
         }
-
         .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            overflow-x: auto;
-            gap: 0;
+            max-width: 1200px; margin: 0 auto;
+            display: flex; overflow-x: auto; gap: 0;
             scrollbar-width: none;
         }
-
         .nav-inner::-webkit-scrollbar { display: none; }
-
         .nav a {
-            color: #8b7a6a;
-            text-decoration: none;
-            font-size: 0.8rem;
-            padding: 15px 18px;
+            color: #8b7a6a; text-decoration: none;
+            font-size: 0.8rem; padding: 15px 18px;
             white-space: nowrap;
             border-bottom: 2px solid transparent;
             transition: all 0.3s;
         }
+        .nav a:hover { color: #b4783c; border-bottom-color: #b4783c; }
 
-        .nav a:hover {
-            color: #b4783c;
-            border-bottom-color: #b4783c;
-        }
-
-        /* Sections */
         .section {
-            max-width: 1100px;
-            margin: 0 auto;
+            max-width: 1100px; margin: 0 auto;
             padding: 80px 30px;
         }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
+        .section-header { text-align: center; margin-bottom: 60px; }
         .section-header .num {
             font-family: 'Noto Serif SC', serif;
-            font-size: 3rem;
-            font-weight: 900;
-            color: rgba(180, 120, 60, 0.15);
-            line-height: 1;
+            font-size: 3rem; font-weight: 900;
+            color: rgba(180, 120, 60, 0.15); line-height: 1;
         }
-
         .section-header h2 {
             font-family: 'Noto Serif SC', serif;
-            font-size: 2rem;
-            color: #f0e6d0;
-            margin-top: -15px;
+            font-size: 2rem; color: #f0e6d0; margin-top: -15px;
         }
-
-        .section-header p {
-            color: #8b7a6a;
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-
+        .section-header p { color: #8b7a6a; margin-top: 10px; font-size: 0.9rem; }
         .divider {
-            width: 60px;
-            height: 2px;
+            width: 60px; height: 2px;
             background: linear-gradient(90deg, transparent, #b4783c, transparent);
             margin: 20px auto;
         }
 
-        /* Store Info Card */
         .info-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 20px; margin-bottom: 40px;
         }
-
         .info-card {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 12px;
-            padding: 25px;
+            border-radius: 12px; padding: 25px;
         }
-
         .info-card .label {
-            font-size: 0.75rem;
-            color: #8b7a6a;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
+            font-size: 0.75rem; color: #8b7a6a;
+            letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
         }
+        .info-card .value { font-size: 1.1rem; color: #e0d5c4; font-weight: 500; }
+        .info-card .value strong { color: #b4783c; }
 
-        .info-card .value {
-            font-size: 1.1rem;
-            color: #e0d5c4;
-            font-weight: 500;
-        }
-
-        .info-card .value strong {
-            color: #b4783c;
-        }
-
-        /* Content Cards */
         .content-card {
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 30px;
+            border-radius: 16px; padding: 40px; margin-bottom: 30px;
         }
-
         .content-card h3 {
             font-family: 'Noto Serif SC', serif;
-            font-size: 1.3rem;
-            color: #d4a86a;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            font-size: 1.3rem; color: #d4a86a;
+            margin-bottom: 20px; display: flex; align-items: center; gap: 12px;
         }
-
-        .content-card h3 .icon {
-            font-size: 1.5rem;
-        }
-
-        .content-card p, .content-card li {
-            color: #c4b8a8;
-            margin-bottom: 10px;
-        }
-
-        .content-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
+        .content-card h3 .icon { font-size: 1.5rem; }
+        .content-card p, .content-card li { color: #c4b8a8; margin-bottom: 10px; }
+        .content-card ul { list-style: none; padding: 0; }
         .content-card ul li {
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
+            padding: 8px 0; padding-left: 20px; position: relative;
         }
-
         .content-card ul li::before {
-            content: '›';
-            position: absolute;
-            left: 0;
-            color: #b4783c;
-            font-weight: bold;
+            content: '›'; position: absolute; left: 0;
+            color: #b4783c; font-weight: bold;
         }
 
-        /* Timeline */
         .timeline {
-            position: relative;
-            padding-left: 30px;
+            position: relative; padding-left: 30px;
         }
-
         .timeline::before {
-            content: '';
-            position: absolute;
-            left: 8px;
-            top: 0;
-            bottom: 0;
-            width: 1px;
+            content: ''; position: absolute; left: 8px;
+            top: 0; bottom: 0; width: 1px;
             background: rgba(180, 120, 60, 0.3);
         }
-
         .timeline-item {
-            position: relative;
-            padding: 20px 0 20px 30px;
+            position: relative; padding: 20px 0 20px 30px;
         }
-
         .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -22px;
-            top: 28px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #b4783c;
-            border: 2px solid #1a1a1a;
+            content: ''; position: absolute; left: -22px; top: 28px;
+            width: 12px; height: 12px; border-radius: 50%;
+            background: #b4783c; border: 2px solid #1a1a1a;
         }
-
         .timeline-item .period {
-            font-size: 0.8rem;
-            color: #b4783c;
-            font-weight: 500;
-            letter-spacing: 2px;
+            font-size: 0.8rem; color: #b4783c;
+            font-weight: 500; letter-spacing: 2px;
         }
+        .timeline-item h4 { font-size: 1.1rem; color: #e0d5c4; margin: 5px 0 10px; }
 
-        .timeline-item h4 {
-            font-size: 1.1rem;
-            color: #e0d5c4;
-            margin: 5px 0 10px;
-        }
-
-        /* Two column */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 
         @media (max-width: 768px) {
             .two-col { grid-template-columns: 1fr; }
@@ -316,137 +186,83 @@
             .section { padding: 50px 20px; }
         }
 
-        /* Pricing table */
         .pricing-table {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin: 30px 0;
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 20px; margin: 30px 0;
         }
-
         .pricing-item {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
+            border-radius: 12px; padding: 25px; text-align: center;
             transition: all 0.3s;
         }
-
-        .pricing-item:hover {
-            border-color: #b4783c;
-            transform: translateY(-3px);
-        }
-
-        .pricing-item .name {
-            font-size: 1rem;
-            color: #e0d5c4;
-            margin-bottom: 10px;
-        }
-
+        .pricing-item:hover { border-color: #b4783c; transform: translateY(-3px); }
+        .pricing-item .name { font-size: 1rem; color: #e0d5c4; margin-bottom: 10px; }
         .pricing-item .price {
             font-family: 'Noto Serif SC', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #b4783c;
+            font-size: 2rem; font-weight: 700; color: #b4783c;
         }
-
-        .pricing-item .price small {
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: #8b7a6a;
-        }
-
+        .pricing-item .price small { font-size: 0.9rem; font-weight: 400; color: #8b7a6a; }
         .pricing-item .tag {
-            display: inline-block;
-            padding: 3px 12px;
+            display: inline-block; padding: 3px 12px;
             background: rgba(180, 120, 60, 0.15);
-            border-radius: 20px;
-            font-size: 0.75rem;
-            color: #b4783c;
-            margin-top: 10px;
+            border-radius: 20px; font-size: 0.75rem; color: #b4783c; margin-top: 10px;
         }
+        @media (max-width: 768px) { .pricing-table { grid-template-columns: 1fr; } }
 
-        @media (max-width: 768px) {
-            .pricing-table { grid-template-columns: 1fr; }
-        }
-
-        /* Footer */
         .footer {
-            text-align: center;
-            padding: 60px 30px;
+            text-align: center; padding: 60px 30px;
             border-top: 1px solid rgba(255,255,255,0.05);
-            color: #5a4a3a;
-            font-size: 0.85rem;
+            color: #5a4a3a; font-size: 0.85rem;
         }
+        .footer strong { color: #8b7a6a; }
 
-        .footer strong {
-            color: #8b7a6a;
-        }
-
-        /* Highlight box */
         .highlight-box {
             background: linear-gradient(135deg, rgba(180, 120, 60, 0.08), rgba(139, 90, 43, 0.05));
             border: 1px solid rgba(180, 120, 60, 0.2);
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px 0;
+            border-radius: 12px; padding: 30px; margin: 30px 0;
         }
+        .highlight-box h4 { color: #d4a86a; margin-bottom: 15px; }
 
-        .highlight-box h4 {
-            color: #d4a86a;
-            margin-bottom: 15px;
-        }
-
-        /* Table */
         .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+            width: 100%; border-collapse: collapse; margin: 20px 0;
         }
-
         .data-table th, .data-table td {
-            padding: 12px 16px;
-            text-align: left;
+            padding: 12px 16px; text-align: left;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-
         .data-table th {
-            font-size: 0.8rem;
-            color: #8b7a6a;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 500;
+            font-size: 0.8rem; color: #8b7a6a;
+            letter-spacing: 1px; text-transform: uppercase; font-weight: 500;
         }
+        .data-table td { color: #c4b8a8; }
+        .data-table tr:hover td { background: rgba(255,255,255,0.02); }
 
-        .data-table td {
-            color: #c4b8a8;
-        }
-
-        .data-table tr:hover td {
-            background: rgba(255,255,255,0.02);
-        }
-
-        /* Badge */
         .badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
+            display: inline-block; padding: 3px 10px;
+            border-radius: 4px; font-size: 0.75rem;
         }
-
         .badge-green { background: rgba(76, 175, 80, 0.15); color: #66bb6a; }
         .badge-orange { background: rgba(255, 152, 0, 0.15); color: #ffa726; }
         .badge-red { background: rgba(244, 67, 54, 0.15); color: #ef5350; }
         .badge-blue { background: rgba(33, 150, 243, 0.15); color: #42a5f5; }
+        .badge-purple { background: rgba(156, 39, 176, 0.15); color: #ab47bc; }
+
+        .revision-note {
+            background: rgba(255, 152, 0, 0.08);
+            border-left: 3px solid #ffa726;
+            border-radius: 8px; padding: 20px; margin-bottom: 30px;
+        }
+        .revision-note p { color: #c4a882; font-size: 0.9rem; }
+        .revision-note strong { color: #ffa726; }
     </style>
 </head>
 <body>
 
-<!-- Hero Section -->
 <section class="hero">
+    <div class="version-tag">修订合规版 V2.0</div>
     <div class="hero-content">
-        <div class="hero-badge">✦ 全案运营方案</div>
+        <div class="hero-badge">✦ 全案运营方案 · 修订合规版</div>
         <h1>白家老鹅坊</h1>
         <p class="subtitle">塘沽 · 杭州道</p>
         <p class="slogan">"从夜市摆摊到街坊名店"</p>
@@ -454,24 +270,32 @@
     <div class="scroll-indicator">▼ 向下滚动</div>
 </section>
 
-<!-- Navigation -->
 <nav class="nav">
     <div class="nav-inner">
         <a href="#info">店铺档案</a>
         <a href="#story">品牌故事</a>
         <a href="#product">产品策略</a>
+        <a href="#compliance">合规与供应</a>
         <a href="#opening">开业节奏</a>
         <a href="#member">会员体系</a>
         <a href="#douyin">抖音运营</a>
         <a href="#dianping">点评运营</a>
+        <a href="#waimai">外卖运营</a>
         <a href="#cashier">收银系统</a>
         <a href="#budget">预算拆解</a>
         <a href="#sop">SOP流程</a>
+        <a href="#finance">财务预期</a>
         <a href="#risk">风险预案</a>
     </div>
 </nav>
 
-<!-- 店铺档案 -->
+<div class="section" style="padding-top:40px;padding-bottom:0">
+    <div class="revision-note">
+        <p>⚠️ <strong>本版为修订合规版 V2.0</strong>，针对原V1.0方案进行了以下核心修正：</p>
+        <p>① 合规红线修正 · ② 人均消费修正 · ③ 供应链体系扩充 · ④ 开业倒计时延长 · ⑤ 营销数据真实化 · ⑥ 新增外卖运营板块</p>
+    </div>
+</div>
+
 <section class="section" id="info">
     <div class="section-header">
         <div class="num">01</div>
@@ -487,7 +311,7 @@
         </div>
         <div class="info-card">
             <div class="label">地址</div>
-            <div class="value">天津塘沽 · 杭州道 · 福建北路15-1-501号</div>
+            <div class="value">天津塘沽 · 杭州道 · 福建北路商业底商<br><span style="font-size:0.8rem;color:#8b7a6a">⚠ 需确权为商业性质，办理食品经营许可</span></div>
         </div>
         <div class="info-card">
             <div class="label">面积 / 外摆</div>
@@ -495,15 +319,15 @@
         </div>
         <div class="info-card">
             <div class="label">人均</div>
-            <div class="value"><strong>¥100</strong></div>
+            <div class="value"><strong>¥70</strong><span style="font-size:0.85rem;color:#8b7a6a;margin-left:8px">（对外宣传锚点¥60-80）</span></div>
         </div>
         <div class="info-card">
             <div class="label">品类</div>
-            <div class="value">鲁菜 · 鹅 · 烟火炒鸡</div>
+            <div class="value">鲁菜 · 鹅类专门店 · 烟火炒鸡</div>
         </div>
         <div class="info-card">
             <div class="label">状态</div>
-            <div class="value"><span class="badge badge-orange">筹备期</span></div>
+            <div class="value"><span class="badge badge-orange">筹备期</span> · 预计55天开业</div>
         </div>
         <div class="info-card">
             <div class="label">包间</div>
@@ -511,36 +335,11 @@
         </div>
         <div class="info-card">
             <div class="label">核心产品</div>
-            <div class="value"><strong>现宰大鹅 ¥99/半只</strong> · 白家烟火炒鸡</div>
-        </div>
-    </div>
-
-    <div class="content-card">
-        <h3><span class="icon">💡</span> 美团智能版收银系统 · 整体部署方案</h3>
-        <p>从收银、点餐、库存管理到会员营销全链路接入美团智能版收银系统。</p>
-        <div class="two-col" style="margin-top:20px">
-            <div>
-                <h4 style="color:#b4783c;margin-bottom:10px">硬件配置</h4>
-                <ul>
-                    <li>美团收银一体机 × 1台（前厅收银主台）</li>
-                    <li>云打印机 × 1台（外卖出单备用）</li>
-                    <li>扫码枪/扫码盒 × 1个（快速结账）</li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="color:#b4783c;margin-bottom:10px">软件功能</h4>
-                <ul>
-                    <li>堂食点餐 + 扫码点餐 + 外卖接单三端打通</li>
-                    <li>会员储值/积分/优惠券系统</li>
-                    <li>库存管理（每日鲜鹅进出库）</li>
-                    <li>经营报表（每日营收/菜品排行/客单价分析）</li>
-                </ul>
-            </div>
+            <div class="value"><strong>铁锅炖老鹅 ¥88/半只</strong> · 白家烟火炒鸡</div>
         </div>
     </div>
 </section>
 
-<!-- 品牌故事 -->
 <section class="section" id="story">
     <div class="section-header">
         <div class="num">02</div>
@@ -559,16 +358,16 @@
     <div class="two-col">
         <div class="content-card">
             <h3><span class="icon">🔥</span> 老板的烟火基因</h3>
-            <p>老板之前在夜市摆摊做 <strong>「白家烟火炒鸡」</strong>，凭借一锅热气腾腾的炒鸡积累了第一批老客。从摊车到门店，不变的是那股烟火气——食材当天现宰，锅气十足。</p>
+            <p>老板之前在夜市摆摊做 <strong>「白家烟火炒鸡」</strong>，凭借一锅热气腾腾的炒鸡积累了第一批老客。从摊车到门店，不变的是那股烟火气——食材当天屠宰冷链到店，锅气十足。</p>
             <p>现在从炒鸡延伸到老鹅，产品线更完整，但核心不变：<strong>新鲜、现做、不凑合。</strong></p>
         </div>
         <div class="content-card">
             <h3><span class="icon">🦆</span> 白家老鹅坊的定位</h3>
-            <p><strong>「街坊食堂 · 现宰老鹅」</strong></p>
+            <p><strong>「塘沽人的社区鹅类专门店」</strong></p>
             <ul>
                 <li>不是精致餐厅，是街坊邻里的烟火食堂</li>
-                <li>不是冷冻货，是每天现宰的鲜鹅</li>
-                <li>不是高冷价，是99半只的亲民定价</li>
+                <li>定点屠宰每日冷链配送，不是冷冻货</li>
+                <li>不是高冷价，是88半只的亲民定价</li>
                 <li>老客从摆摊跟到店里，靠的是手艺和真诚</li>
             </ul>
         </div>
@@ -576,13 +375,12 @@
 
     <div class="highlight-box">
         <h4>📣 品牌核心信息（对外传播用）</h4>
-        <p><strong>一句话定位：</strong>"塘沽人的鲜鹅食堂——每天现宰，99半只"</p>
+        <p><strong>一句话定位：</strong>"塘沽人的鲜鹅食堂——定点屠宰，每日冷链配送，88半只"</p>
         <p><strong>品牌背书：</strong>"老板摆摊起家，白家烟火炒鸡老味道"</p>
-        <p><strong>信任状：</strong>"不冷冻、不过夜、不凑合" —— 这是白家的三条铁律</p>
+        <p><strong>信任状：</strong>"不冷冻、不过夜、不凑合" —— 白家三条铁律</p>
     </div>
 </section>
 
-<!-- 产品策略 -->
 <section class="section" id="product">
     <div class="section-header">
         <div class="num">03</div>
@@ -592,10 +390,10 @@
     </div>
 
     <div class="pricing-table">
-        <div class="pricing-item">
-            <div class="name">招牌铁锅炖大鹅</div>
-            <div class="price">¥99 <small>/ 半只</small></div>
-            <div class="tag">🔥 爆款引流</div>
+        <div class="pricing-item" style="border-color:rgba(180,120,60,0.3)">
+            <div class="name">铁锅炖老鹅</div>
+            <div class="price">¥88 <small>/ 半只</small></div>
+            <div class="tag">🔥 引流+利润主力</div>
         </div>
         <div class="pricing-item">
             <div class="name">白家烟火炒鸡</div>
@@ -604,143 +402,202 @@
         </div>
         <div class="pricing-item">
             <div class="name">卤味拼盘</div>
-            <div class="price">¥38 <small>/ 例</small></div>
-            <div class="tag">🥩 高毛利</div>
+            <div class="price">¥28-38 <small>/ 例</small></div>
+            <div class="tag">🥩 高毛利搭档</div>
         </div>
     </div>
 
     <div class="content-card">
-        <h3><span class="icon">📋</span> 完整产品矩阵（建议）</h3>
+        <h3><span class="icon">📋</span> 完整产品矩阵</h3>
         <table class="data-table">
             <thead>
                 <tr>
-                    <th>品类</th>
-                    <th>菜品</th>
-                    <th>价格</th>
+                    <th>产品线</th>
+                    <th>代表菜品</th>
+                    <th>定价</th>
+                    <th>毛利率</th>
                     <th>定位</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>招牌硬菜</strong></td>
-                    <td>铁锅炖大鹅（半只）</td>
-                    <td>¥99</td>
-                    <td><span class="badge badge-red">必点爆款</span></td>
-                </tr>
-                <tr>
-                    <td><strong>招牌硬菜</strong></td>
-                    <td>铁锅炖大鹅（整只）</td>
-                    <td>¥188</td>
-                    <td><span class="badge badge-red">聚餐首选</span></td>
+                    <td><strong>招牌大菜</strong></td>
+                    <td>铁锅炖老鹅（整只/半只）</td>
+                    <td>¥168 / ¥88</td>
+                    <td>55%</td>
+                    <td><span class="badge badge-red">引流+利润主力</span></td>
                 </tr>
                 <tr>
                     <td><strong>情怀菜</strong></td>
                     <td>白家烟火炒鸡</td>
                     <td>¥68</td>
+                    <td>58%</td>
                     <td><span class="badge badge-orange">老板故事</span></td>
                 </tr>
                 <tr>
-                    <td><strong>主厨推荐</strong></td>
-                    <td>鹅血粉丝煲</td>
-                    <td>¥28</td>
-                    <td><span class="badge badge-green">高毛利</span></td>
+                    <td><strong>佐餐卤味</strong></td>
+                    <td>酱鹅翅、卤鹅胗、白切鹅</td>
+                    <td>¥22-38</td>
+                    <td>60%</td>
+                    <td><span class="badge badge-green">高毛利搭档</span></td>
                 </tr>
                 <tr>
-                    <td><strong>主厨推荐</strong></td>
-                    <td>卤鹅头 / 鹅翅（拼盘）</td>
-                    <td>¥38</td>
-                    <td><span class="badge badge-green">下酒神器</span></td>
-                </tr>
-                <tr>
-                    <td><strong>凉菜</strong></td>
-                    <td>凉拌鹅杂 / 黄瓜拉皮 / 拌三丝</td>
-                    <td>¥16-22</td>
-                    <td><span class="badge badge-blue">凑整用</span></td>
-                </tr>
-                <tr>
-                    <td><strong>主食</strong></td>
-                    <td>鹅油拌饭 / 手擀面 / 馒头</td>
-                    <td>¥5-12</td>
-                    <td><span class="badge badge-blue">饱腹</span></td>
+                    <td><strong>主食/汤品</strong></td>
+                    <td>鹅油拌面、鹅血粉丝汤</td>
+                    <td>¥12-18</td>
+                    <td>65%</td>
+                    <td><span class="badge badge-blue">拉低客单门槛</span></td>
                 </tr>
                 <tr>
                     <td><strong>饮品</strong></td>
-                    <td>大窑 / 酸梅汤 / 啤酒</td>
-                    <td>¥5-10</td>
-                    <td><span class="badge badge-blue">解腻</span></td>
+                    <td>自制酸梅汤、啤酒</td>
+                    <td>¥6-12</td>
+                    <td>70%</td>
+                    <td><span class="badge badge-blue">补充利润</span></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="highlight-box">
-        <h4>🎯 客单价拆解（目标¥100）</h4>
-        <p>两人用餐：铁锅炖大鹅半只¥99 + 主食2份¥14 + 饮品¥10 = <strong>¥123</strong>，人均 ¥61 → 加一份炒鸡或卤味 → <strong>人均¥95-110 ✅</strong></p>
-        <p>四人聚餐：整只炖大鹅¥188 + 炒鸡¥68 + 凉菜¥22 + 主食4份¥28 + 饮品¥30 = <strong>¥336</strong>，人均 <strong>¥84</strong> → 加鹅翅拼盘/海鲜 → <strong>人均¥95-105 ✅</strong></p>
+        <h4>🎯 客单价拆解（人均¥70）</h4>
+        <p><strong>两人用餐：</strong>半只鹅¥88 + 卤味¥28 + 主食2份¥24 + 饮品2份¥16 = <strong>¥156，人均¥78</strong></p>
+        <p><strong>四人聚餐：</strong>整只鹅¥168 + 炒鸡¥68 + 卤味¥28 + 凉菜¥18 + 主食4份¥28 + 饮品4份¥32 = <strong>¥342，人均¥85</strong></p>
+        <p><strong>一人简餐：</strong>鹅油拌面¥12 + 鹅血汤¥12 = <strong>¥24</strong>（午间快速解决）</p>
+        <p style="margin-top:10px;color:#b4783c">→ 对外宣传锚定 <strong>人均¥70</strong>，实际客单¥60-80，符合社区店消费力</p>
     </div>
 </section>
 
-<!-- 开业节奏 -->
-<section class="section" id="opening">
+<section class="section" id="compliance">
     <div class="section-header">
         <div class="num">04</div>
-        <h2>开业筹备节奏 · 28天倒计时</h2>
+        <h2>合规与供应链体系</h2>
+        <p>Compliance & Supply Chain</p>
+        <div class="divider"></div>
+    </div>
+
+    <div class="highlight-box" style="border-color:rgba(244,67,54,0.3)">
+        <h4>⚠️ 合规红线（V1.0重大修正）</h4>
+        <p><strong>① 严禁门店现宰！</strong>原方案"05:00活鹅到店→宰杀处理"操作违规。已修正为：<br>
+        ✅ 与天津宁河/宝坻<strong>定点禽类屠宰场</strong>签订日配协议，每日06:30前冷链配送已宰杀净鹅到店，门店仅负责验货、分割、冷藏。</p>
+        <p><strong>② 经营场所</strong>：确认选址为商业性质底商（需提供房产证办理食品经营许可证）。排烟系统须符合环保要求。</p>
+    </div>
+
+    <div class="content-card">
+        <h3><span class="icon">🔗</span> 供应链体系（由2家扩至4家）</h3>
+        <p>鲜鹅供应一日不能断。</p>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>供应商类型</th>
+                    <th>数量</th>
+                    <th>职责</th>
+                    <th>备选机制</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主力屠宰配送商</strong></td>
+                    <td>1家（宁河定点厂）</td>
+                    <td>每日主力供货，签年度框架协议</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>备用屠宰配送商</strong></td>
+                    <td>2家（宝坻/武清各1）</td>
+                    <td>主力断供时48小时内启动</td>
+                    <td>提前备案检疫资质</td>
+                </tr>
+                <tr>
+                    <td><strong>应急冷冻储备商</strong></td>
+                    <td>1家（冷链贸易商）</td>
+                    <td>极端情况下供应冷冻净鹅（提前腌制使用）</td>
+                    <td>备货量不低于3天用量</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top:15px"><strong>到货验收标准：</strong>每日到货后执行"三看一闻"——看皮色（乳白微黄）、看眼球（饱满）、看肉质弹性（按压回弹）、闻气味（只有禽类正常腥味，无酸败）。不合格当场拒收并启动备用供应。</p>
+    </div>
+</section>
+
+<section class="section" id="opening">
+    <div class="section-header">
+        <div class="num">05</div>
+        <h2>开业筹备时间表 · 55天倒计时</h2>
         <p>Opening Countdown</p>
         <div class="divider"></div>
     </div>
 
     <div class="timeline">
         <div class="timeline-item">
-            <span class="period">⏰ D-28 ~ D-21 | 第1周</span>
-            <h4>蓄水 · 装修收尾 + 旧客通知</h4>
+            <span class="period">⏰ D1-D20 | 第一阶段：证照前置</span>
+            <h4>⚠️ 证照到手前不装修</h4>
             <ul>
-                <li>门头招牌安装（破旧粗犷风·老榆木+锈铁皮）</li>
-                <li>美团智能版收银系统到货安装调试</li>
-                <li>在周边社区张贴"换新颜·老味道"预告海报</li>
-                <li>老板发抖音："从美膳换成白家，还是那个灶！"</li>
-                <li>建微信群——拉入老板之前摆摊积累的老客</li>
+                <li>① 提交食品经营许可申请</li>
+                <li>② 环评备案 / 排烟验收</li>
+                <li>③ 消防检查</li>
+                <li>④ 确认选址为商业性质底商</li>
             </ul>
         </div>
         <div class="timeline-item">
-            <span class="period">⏰ D-21 ~ D-14 | 第2周</span>
-            <h4>预热 · 产品测试 + 线上造势</h4>
+            <span class="period">⏰ D10-D35 | 第二阶段：硬装施工</span>
+            <h4>后厨改造 + 前厅装修</h4>
             <ul>
-                <li>试菜：确定出品SOP，鹅的炖制时间/火候标准化</li>
-                <li>大众点评创建店铺页，上传相册（装修效果图+老板炒鸡摊老照片）</li>
-                <li>抖音发布"白家烟火炒鸡"历史视频，预热新店</li>
-                <li>发传单：覆盖周边小区+写字楼</li>
+                <li>后厨改造（排烟/隔油池/地砖防水）</li>
+                <li>前厅装修、明档设计</li>
+                <li>门头招牌安装（破旧粗犷风）</li>
+                <li>水电燃气验收通过</li>
             </ul>
         </div>
         <div class="timeline-item">
-            <span class="period">⏰ D-14 ~ D-7 | 第3周</span>
-            <h4>联动 · 试营业一周</h4>
+            <span class="period">⏰ D30-D45 | 第三阶段：设备进场+系统调试</span>
+            <h4>美团收银系统全线部署</h4>
             <ul>
-                <li>低调试营业——只接待微信群里老客</li>
-                <li>试营业活动：老客带新客，半只鹅送一份炒鸡</li>
-                <li>根据反馈微调菜品和出餐速度</li>
-                <li>收银系统跑通——扫码点餐→后厨→结账全链路</li>
-                <li>搜集好评截图，为正式开业做准备</li>
+                <li>美团智能版收银一体机安装</li>
+                <li>扫码点餐调试、云打印机对接</li>
+                <li>库存预警系统测试</li>
+                <li>美团外卖接单器对接</li>
+                <li>系统全流程跑通</li>
             </ul>
         </div>
         <div class="timeline-item">
-            <span class="period">⏰ D-7 ~ D-Day | 第4周</span>
-            <h4>爆发 · 开业活动全量上线</h4>
+            <span class="period">⏰ D35-D50 | 第四阶段：试菜定SOP</span>
+            <h4>定标准、定流程</h4>
             <ul>
-                <li>正式开业！</li>
-                <li>活动一：<strong>开业前3天，铁锅炖大鹅半只 ¥79</strong>（原价¥99，限时尝鲜）</li>
-                <li>活动二：<strong>充值200送50，再送白家烟火炒鸡半价券</strong></li>
-                <li>活动三：<strong>大众点评收藏打卡送酸梅汤</strong></li>
-                <li>抖音投本地推，覆盖塘沽3公里范围</li>
+                <li>所有菜品定投料标准（克重精确）</li>
+                <li>定出餐时间、定摆盘</li>
+                <li>供应商屠宰配送协议签定</li>
+                <li>店长/厨师长签SOP确认书</li>
+                <li>6款核心菜品盲测通过</li>
+            </ul>
+        </div>
+        <div class="timeline-item">
+            <span class="period">⏰ D40-D55 | 第五阶段：员工培训+试营业</span>
+            <h4>演练+磨合</h4>
+            <ul>
+                <li>前厅服务流程演练</li>
+                <li>差评回应、客诉处理培训</li>
+                <li>抖音发布装修/备货花絮预热</li>
+                <li>试营业7天（菜品8折，只接散客）</li>
+                <li>日均翻台≥2次即视为合格</li>
+            </ul>
+        </div>
+        <div class="timeline-item">
+            <span class="period">🎉 D56 | 正式开业</span>
+            <h4>剪彩 + 储值活动上线</h4>
+            <ul>
+                <li>正式剪彩，同步开启储值活动</li>
+                <li>抖音本地推投放启动</li>
+                <li>大众点评评分冲刺开启</li>
             </ul>
         </div>
     </div>
 </section>
 
-<!-- 会员体系 -->
 <section class="section" id="member">
     <div class="section-header">
-        <div class="num">05</div>
-        <h2>会员体系 · 从储值到复购</h2>
+        <div class="num">06</div>
+        <h2>会员体系 · 储值与复购</h2>
         <p>Membership System</p>
         <div class="divider"></div>
     </div>
@@ -754,7 +611,7 @@
                         <th>档位</th>
                         <th>赠送</th>
                         <th>到账</th>
-                        <th>说明</th>
+                        <th>折扣</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -762,53 +619,53 @@
                         <td>充值 ¥200</td>
                         <td>送 ¥30</td>
                         <td>¥230</td>
-                        <td>≈ 2次半只鹅</td>
+                        <td>≈85折</td>
                     </tr>
                     <tr>
                         <td>充值 ¥500</td>
                         <td>送 ¥80</td>
                         <td>¥580</td>
-                        <td>≈ 5次半只鹅</td>
+                        <td>≈84折</td>
                     </tr>
                     <tr>
-                        <td>充值 ¥1000</td>
+                        <td>充值 ¥1,000</td>
                         <td>送 ¥200</td>
                         <td>¥1,200</td>
-                        <td>≈ 赠半只鹅2次</td>
+                        <td>≈83折</td>
                     </tr>
                 </tbody>
             </table>
+            <p style="margin-top:15px;font-size:0.85rem;color:#8b7a6a">⚠ 风控规则：储值余额仅限消费不可提现 · 赠送金额按比例摊销 · 储值资金单独列账不挪作他用</p>
         </div>
         <div class="content-card">
             <h3><span class="icon">🎟️</span> 复购券策略</h3>
             <ul>
-                <li><strong>首单返券：</strong>第一次消费满¥99送¥10代金券（下次用）</li>
+                <li><strong>首单返券：</strong>第一次消费满¥88送¥10代金券（下次用）</li>
                 <li><strong>集章卡：</strong>消费3次送白家烟火炒鸡半份</li>
                 <li><strong>生日礼：</strong>会员生日月到店送卤味拼盘一份</li>
-                <li><strong>外摆福利：</strong>晚上9点后，啤酒买一送一（提升外摆区夜宵客流）</li>
+                <li><strong>外摆福利：</strong>晚上9点后，啤酒买一送一</li>
                 <li><strong>微信社群专享：</strong>每周三群内抢¥9.9代¥30券（限量10张）</li>
             </ul>
         </div>
     </div>
 
     <div class="highlight-box">
-        <h4>📱 会员拉新 · 开业期执行</h4>
+        <h4>📱 会员拉新 · 开业期</h4>
         <p>收银台放置会员二维码立牌 → 结账时店员说：<strong>"姐/哥，扫码注册会员，今天这顿饭直接减10块！"</strong></p>
-        <p>目标：开业首周会员注册 ≥ 200人</p>
+        <p>目标：开业首月会员注册 ≥ 300人</p>
     </div>
 </section>
 
-<!-- 抖音运营 -->
 <section class="section" id="douyin">
     <div class="section-header">
-        <div class="num">06</div>
+        <div class="num">07</div>
         <h2>抖音运营 · 短视频引爆本地流量</h2>
         <p>Douyin Strategy</p>
         <div class="divider"></div>
     </div>
 
     <div class="content-card">
-        <h3><span class="icon">🎬</span> 内容规划（开业前+开业期）</h3>
+        <h3><span class="icon">🎬</span> 内容规划</h3>
         <table class="data-table">
             <thead>
                 <tr>
@@ -820,23 +677,13 @@
             <tbody>
                 <tr>
                     <td><span class="badge badge-orange">筹备期</span></td>
-                    <td>老板故事："从夜市摊到开店的100天"系列</td>
+                    <td>老板故事 + 装修花絮 + 后厨备货过程（非宰杀，而是清洗分割炖煮）</td>
                     <td>每周3条</td>
                 </tr>
                 <tr>
-                    <td><span class="badge badge-orange">筹备期</span></td>
-                    <td>装修过程：破旧粗犷门头改造花絮</td>
-                    <td>每周2条</td>
-                </tr>
-                <tr>
                     <td><span class="badge badge-red">开业期</span></td>
-                    <td>现宰大鹅制作过程：从活鹅到上桌全记录</td>
+                    <td>老鹅从锅里捞出的热气镜头、顾客啃鹅翅特写、本地探店博主合作</td>
                     <td>每天1条</td>
-                </tr>
-                <tr>
-                    <td><span class="badge badge-red">开业期</span></td>
-                    <td>顾客吃播/探店视频（邀请本地探店博主）</td>
-                    <td>每周3-4条</td>
                 </tr>
                 <tr>
                     <td><span class="badge badge-green">常态化</span></td>
@@ -846,45 +693,44 @@
             </tbody>
         </table>
         <div style="margin-top:20px">
-            <h4 style="color:#b4783c;margin-bottom:10px">🔥 开业期必抓的爆款选题</h4>
+            <h4 style="color:#b4783c;margin-bottom:10px">🔥 开业期爆款选题</h4>
             <ul>
-                <li><strong>"天津塘沽99块钱半只鹅，老板疯了吗？"</strong> —— 价格锚点</li>
-                <li><strong>"从摆摊到开店，白家烟火炒鸡的十年"</strong> —— 情怀故事</li>
-                <li><strong>"每天凌晨4点宰的鹅，就是这个味儿"</strong> —— 信任背书</li>
-                <li><strong>"不冷冻不过夜不凑合！白家三条铁律"</strong> —— 品牌记忆点</li>
+                <li><strong>"天津塘沽88块钱半只鹅，老板疯了吗？"</strong> — 价格锚点</li>
+                <li><strong>"从摆摊到开店，白家烟火炒鸡的十年"</strong> — 情怀故事</li>
+                <li><strong>"每天凌晨冷链到店的鹅，就是这个味儿"</strong> — 信任背书</li>
+                <li><strong>"不冷冻不过夜不凑合！白家三条铁律"</strong> — 品牌记忆点</li>
             </ul>
         </div>
     </div>
 
     <div class="content-card">
-        <h3><span class="icon">📢</span> 抖音本地推投放</h3>
+        <h3><span class="icon">📢</span> 抖音本地推投放（修正版）</h3>
         <div class="two-col">
             <div>
                 <h4 style="color:#b4783c;margin-bottom:10px">投放策略</h4>
                 <ul>
-                    <li>开业首周预算：<strong>¥2,000</strong></li>
-                    <li>投放范围：塘沽3公里 + 杭州道商圈</li>
-                    <li>目标人群：25-50岁，美食兴趣用户</li>
-                    <li>投放内容：99元半只鹅的团购视频</li>
+                    <li>开业首月预算：<strong>¥3,000</strong></li>
+                    <li>CPM约¥35-45，可获取<strong>7-10万次曝光</strong></li>
+                    <li>点击率2%-3%，引流到店约200-300人</li>
+                    <li>核销率约60%，实际到店约120-180人</li>
                 </ul>
             </div>
             <div>
-                <h4 style="color:#b4783c;margin-bottom:10px">预期效果</h4>
+                <h4 style="color:#b4783c;margin-bottom:10px">KPI设定</h4>
                 <ul>
-                    <li>曝光量：10-15万次</li>
-                    <li>团购核销：≥60单</li>
+                    <li>不迷信"爆款视频"</li>
+                    <li>首月目标：🔥 <strong>团购核销≥150单</strong></li>
                     <li>POI收藏：≥300次</li>
-                    <li>到店转化率：≥0.5%</li>
+                    <li>核销ROI合格即为成功</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 点评运营 -->
 <section class="section" id="dianping">
     <div class="section-header">
-        <div class="num">07</div>
+        <div class="num">08</div>
         <h2>大众点评 · 评分与口碑管理</h2>
         <p>Dianping Strategy</p>
         <div class="divider"></div>
@@ -903,23 +749,18 @@
             <tbody>
                 <tr>
                     <td><span class="badge badge-orange">试营业</span></td>
-                    <td>邀请老客写评价（真实消费，不刷单）</td>
+                    <td>每天主动邀请10桌客人写好评（赠送小菜一份）</td>
                     <td>积累15-20条真实好评</td>
                 </tr>
                 <tr>
-                    <td><span class="badge badge-red">开业第1周</span></td>
-                    <td>每桌赠送收藏打卡福利（不写好评返现，写"收藏打卡送酸梅汤"）</td>
-                    <td>冲到4.3分+</td>
-                </tr>
-                <tr>
-                    <td><span class="badge badge-red">开业第2周</span></td>
-                    <td>对建议类差评逐一回复并整改</td>
-                    <td>4.5分稳定</td>
+                    <td><span class="badge badge-red">开业首月</span></td>
+                    <td>收藏打卡送酸梅汤，确保首月≥50条好评</td>
+                    <td>评分4.5+</td>
                 </tr>
                 <tr>
                     <td><span class="badge badge-green">常态化</span></td>
-                    <td>每周跟进评价，保持回复率100%</td>
-                    <td>4.5分+维持</td>
+                    <td>每周跟进评价，30分钟内响应差评</td>
+                    <td>评分维持4.5+</td>
                 </tr>
             </tbody>
         </table>
@@ -931,80 +772,148 @@
             <ul>
                 <li>头图：破旧粗犷风门头照（白天明亮版）</li>
                 <li>相册1：老板摆摊老照片 → 开店故事</li>
-                <li>相册2：现宰大鹅制作过程（体现新鲜）</li>
+                <li>相册2：后厨分割炖煮过程（体现新鲜）</li>
                 <li>相册3：外摆区惬意氛围</li>
-                <li>推荐菜排序：铁锅炖大鹅→白家烟火炒鸡→卤味拼盘</li>
+                <li>推荐菜排序：铁锅炖老鹅→白家烟火炒鸡→卤味拼盘</li>
             </ul>
         </div>
         <div class="content-card">
-            <h3><span class="icon">📝</span> 对客建议话术</h3>
+            <h3><span class="icon">📝</span> 对客建议</h3>
             <p><strong>收藏打卡：</strong>"姐，咱们店刚上线点评，您点一下收藏打卡，送您一杯冰镇酸梅汤～"</p>
             <p><strong>求评价：</strong>"哥，要是觉得咱家味儿还行，方便的话在点评上写两句，老板看到特开心！"</p>
-            <p><strong>处理差评：</strong>"感谢您的宝贵对客建议，关于（XX问题）我们已立即整改，欢迎下次再来体验，给您留个半份卤味～"</p>
+            <p><strong>处理差评模板：</strong>30分钟内响应，不辩解、先致歉、私信补偿（如"下次到店送卤味一份"）</p>
         </div>
     </div>
 </section>
 
-<!-- 收银系统 -->
+<section class="section" id="waimai">
+    <div class="section-header">
+        <div class="num">09</div>
+        <h2>外卖平台专项运营（新增）</h2>
+        <p>Delivery Platform Strategy</p>
+        <div class="divider"></div>
+    </div>
+
+    <div class="content-card">
+        <h3><span class="icon">🛵</span> 外卖运营完整策略</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>项目</th>
+                    <th>具体策略</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>平台选择</strong></td>
+                    <td>美团+饿了么双开，首月只做3公里范围</td>
+                </tr>
+                <tr>
+                    <td><strong>外卖专属菜单</strong></td>
+                    <td>不上整只铁锅炖（配送影响口感），主推：<br>
+                    "一人食老鹅饭"¥32 · "双人卤味套餐"¥68 · "鹅血汤+拌面"¥26</td>
+                </tr>
+                <tr>
+                    <td><strong>满减设计</strong></td>
+                    <td>满35减3 / 满68减8 / 满120减18（实付折扣率≤85%）</td>
+                </tr>
+                <tr>
+                    <td><strong>包装方案</strong></td>
+                    <td>汤类用铝箔盒+封口膜，干拌类用PP餐盒，包装成本≤营收4%</td>
+                </tr>
+                <tr>
+                    <td><strong>平台抽成应对</strong></td>
+                    <td>美团抽成约18%-23%，通过"到店自取"免抽成引导，包装内放"下次到店8折券"导流</td>
+                </tr>
+                <tr>
+                    <td><strong>配送时效</strong></td>
+                    <td>出餐≤6分钟，骑手到店不超3分钟交接</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top:15px;color:#b4783c"><strong>外卖首月目标：</strong>日订单量≥15单，月营收贡献约¥1.2-1.5万</p>
+    </div>
+</section>
+
 <section class="section" id="cashier">
     <div class="section-header">
-        <div class="num">08</div>
+        <div class="num">10</div>
         <h2>美团智能版收银 · 应用场景</h2>
         <p>Meituan Smart POS</p>
         <div class="divider"></div>
     </div>
 
     <div class="content-card">
-        <h3><span class="icon">🖥️</span> 落地场景详解</h3>
+        <h3><span class="icon">💡</span> 美团智能版收银系统部署方案</h3>
+        <div class="two-col" style="margin-top:10px">
+            <div>
+                <h4 style="color:#b4783c;margin-bottom:10px">硬件</h4>
+                <ul>
+                    <li>美团收银一体机 × 1台</li>
+                    <li>云打印机 × 1台</li>
+                    <li>扫码枪/扫码盒 × 1个</li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:#b4783c;margin-bottom:10px">软件功能</h4>
+                <ul>
+                    <li>堂食点餐 + 扫码点餐 + 外卖接单三端打通</li>
+                    <li>会员储值/积分/优惠券系统</li>
+                    <li>库存管理（每日鲜鹅进出库）</li>
+                    <li>经营报表 + 每日估清实时同步</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h3><span class="icon">🖥️</span> 核心场景落地</h3>
         <div class="two-col">
             <div>
                 <h4 style="color:#b4783c;margin-bottom:10px">① 扫码点餐</h4>
                 <ul>
-                    <li>每张桌子张贴点餐码</li>
-                    <li>顾客扫码→浏览菜单→自助下单→后厨自动出单</li>
-                    <li>减少服务员点单工作量，提升翻台率</li>
-                    <li>配合外摆区：外摆桌同样扫码点餐</li>
+                    <li>每桌+外摆张贴点餐码</li>
+                    <li>顾客扫码→自助下单→后厨云打印机自动出单</li>
+                    <li>减少服务员点单量，提升翻台率</li>
                 </ul>
             </div>
             <div>
                 <h4 style="color:#b4783c;margin-bottom:10px">② 后厨出单</h4>
                 <ul>
-                    <li>前厅下单 → 后厨云打印机自动出单</li>
-                    <li>鹅/炒鸡类菜品优先打印，分类显示</li>
-                    <li>出菜后服务员划单确认，减少喊单出错</li>
+                    <li>前厅下单→云打印机自动出单</li>
+                    <li>菜品分类打印，出菜后划单确认</li>
                 </ul>
             </div>
             <div>
                 <h4 style="color:#b4783c;margin-bottom:10px">③ 会员营销</h4>
                 <ul>
-                    <li>收银端一键开卡/储值/核销优惠券</li>
+                    <li>一键开卡/储值/核销优惠券</li>
                     <li>自动发放生日礼/复购券</li>
-                    <li>经营报表：会员复购率/储值占比一目了然</li>
+                    <li>会员复购率/储值占比报表</li>
                 </ul>
             </div>
             <div>
-                <h4 style="color:#b4783c;margin-bottom:10px">④ 库存管理</h4>
+                <h4 style="color:#b4783c;margin-bottom:10px">④ 库存+外卖</h4>
                 <ul>
-                    <li>每日鲜鹅入库登记，系统自动扣减</li>
-                    <li>卖完自动告警，避免超卖</li>
-                    <li>月底盘点：损耗率分析，优化采购量</li>
+                    <li>每日鲜鹅入库自动扣减</li>
+                    <li>卖完自动告警+暂停外卖接单</li>
+                    <li>月底盘点：损耗率分析</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="highlight-box">
-        <h4>🧾 收银台对客建议（代替"话术"）</h4>
-        <p><strong>点完单：</strong>"哥，咱家新店开业，充200送30，今天这顿饭直接减10块，以后每次来都能用～"</p>
-        <p><strong>结账时：</strong>"姐，加一下咱家群，每周三群里发9.9抵30的福利券，手慢无！"</p>
-        <p><strong>外卖出餐：</strong>美团外卖接单→出餐→打包→扫码核销，全链路不超过8分钟</p>
+        <h4>🧾 收银台对客建议</h4>
+        <p><strong>点完单：</strong>"哥，咱家新店开业，充200送30，今天这顿饭直接减10块！"</p>
+        <p><strong>结账时：</strong>"姐，加一下咱家群，每周三9.9抵30，手慢无！"</p>
+        <p><strong>外卖出餐：</strong>接单→出餐→打包→核销，全链路不超过8分钟</p>
     </div>
 </section>
 
-<!-- 预算拆解 -->
 <section class="section" id="budget">
     <div class="section-header">
-        <div class="num">09</div>
+        <div class="num">11</div>
         <h2>开业营销预算拆解</h2>
         <p>Marketing Budget</p>
         <div class="divider"></div>
@@ -1027,12 +936,12 @@
             <tr>
                 <td>收银系统（首批）</td>
                 <td>¥2,000-3,000</td>
-                <td>美团智能版收银一体机+云打印机</td>
+                <td>美团收银一体机+云打印机</td>
             </tr>
             <tr>
                 <td>抖音本地推</td>
-                <td>¥2,000</td>
-                <td>开业首周投流</td>
+                <td>¥3,000</td>
+                <td>开业首月投流</td>
             </tr>
             <tr>
                 <td>开业活动物料</td>
@@ -1051,57 +960,122 @@
             </tr>
             <tr>
                 <td style="font-weight:bold">合计</td>
-                <td style="font-weight:bold;color:#b4783c">≈ ¥16,000-22,500</td>
+                <td style="font-weight:bold;color:#b4783c">≈ ¥17,000-23,500</td>
                 <td>开业首月营销总投入</td>
             </tr>
         </tbody>
     </table>
 </section>
 
-<!-- SOP流程 -->
 <section class="section" id="sop">
     <div class="section-header">
-        <div class="num">10</div>
-        <h2>SOP流程 · 后厨与前厅</h2>
+        <div class="num">12</div>
+        <h2>SOP流程 · 三条铁律与每日必做</h2>
         <p>Standard Operation Procedure</p>
         <div class="divider"></div>
     </div>
 
+    <div class="highlight-box" style="border-color:rgba(180,120,60,0.3)">
+        <h4>🔨 白家三条铁律（修正版）</h4>
+        <p><strong>1️⃣ 不冷冻：</strong>到店鲜鹅当日使用，未用完的净鹅冷藏保存≤24小时，次日上午未用完报废做员工餐</p>
+        <p><strong>2️⃣ 不过夜：</strong>每日闭店前未售出熟食一律报废，绝不留到次日加热再卖</p>
+        <p><strong>3️⃣ 不凑合：</strong>调料缺货时当日停售对应菜品，不用替代品降级出品</p>
+    </div>
+
     <div class="two-col">
         <div class="content-card">
-            <h3><span class="icon">👨‍🍳</span> 后厨SOP</h3>
+            <h3><span class="icon">📋</span> 每日必做三件事（新增）</h3>
+            <p><strong>🕐 晨会（08:30）</strong></p>
             <ul>
-                <li><strong>每日05:00</strong> — 供应商送活鹅到店，验货签收</li>
-                <li><strong>05:00-06:00</strong> — 宰杀处理，分部位切配</li>
-                <li><strong>06:00-09:00</strong> — 老鹅焯水→炖制（大火烧开转小火2小时）</li>
-                <li><strong>09:00-10:30</strong> — 白家烟火炒鸡备料（鸡块腌制、配菜切配）</li>
-                <li><strong>10:30-11:00</strong> — 午市前备餐、调料准备就绪</li>
-                <li><strong>11:00-14:00</strong> — 午市高峰出餐（鹅类提前炖好，点单后加热上桌）</li>
-                <li><strong>14:00-16:30</strong> — 午休+晚餐备料</li>
-                <li><strong>16:30-21:00</strong> — 晚市高峰+外摆区</li>
-                <li><strong>21:00-22:00</strong> — 收档、清洁、盘点库存</li>
+                <li>到货验收签字（三看一闻）</li>
+                <li>当日预估客流通报、备货量确认</li>
+            </ul>
+            <p style="margin-top:15px"><strong>🕐 午市复盘（14:00）</strong></p>
+            <ul>
+                <li>热门菜品销量统计</li>
+                <li>预估晚市补货量</li>
+            </ul>
+            <p style="margin-top:15px"><strong>🕐 闭店交接（21:30）</strong></p>
+            <ul>
+                <li>报废记录签字、库存盘点</li>
+                <li>次日订货量上报供应商</li>
             </ul>
         </div>
         <div class="content-card">
-            <h3><span class="icon">💁</span> 前厅SOP</h3>
+            <h3><span class="icon">👨‍🍳</span> 后厨SOP</h3>
             <ul>
-                <li><strong>开档（10:00）</strong> — 检查台面、外摆区桌椅、收银系统测试</li>
-                <li><strong>迎客</strong> — 引导入座 + 扫码点餐提示</li>
-                <li><strong>点餐协助</strong> — 推荐当季新品、提示"99半只鹅"招牌</li>
-                <li><strong>上菜</strong> — 报菜名 + "您慢用，需要加汤随时叫我"</li>
-                <li><strong>巡台</strong> — 每10分钟巡一次，加茶水/收空盘</li>
-                <li><strong>结账</strong> — 收银系统会员推荐 + 社群拉新</li>
-                <li><strong>送客</strong> — "慢走，下次带朋友来尝尝咱家烟火炒鸡！"</li>
-                <li><strong>收档</strong> — 清洁消毒、餐具盘点、日报表导出</li>
+                <li><strong>06:30</strong> — 冷链配送净鹅到店，验货签收</li>
+                <li><strong>06:30-07:00</strong> — 分割、分部位冷藏</li>
+                <li><strong>07:00-10:00</strong> — 老鹅焯水→炖制（2小时）</li>
+                <li><strong>10:00-10:30</strong> — 烟火炒鸡备料</li>
+                <li><strong>11:00-14:00</strong> — 午市高峰（加热上桌）</li>
+                <li><strong>14:00-16:30</strong> — 午休+晚餐备料</li>
+                <li><strong>16:30-21:00</strong> — 晚市+外摆区</li>
+                <li><strong>21:00-22:00</strong> — 收档、清洁、报废处理</li>
             </ul>
         </div>
     </div>
 </section>
 
-<!-- 风险预案 -->
+<section class="section" id="finance">
+    <div class="section-header">
+        <div class="num">13</div>
+        <h2>财务预期（修正版）</h2>
+        <p>Financial Projection</p>
+        <div class="divider"></div>
+    </div>
+
+    <div class="content-card">
+        <h3><span class="icon">📊</span> 月度经营测算（基于人均¥70，日均70人）</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>项目</th>
+                    <th>月度估算</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>月营业额</strong></td>
+                    <td style="color:#b4783c;font-weight:bold">70人 × ¥70 × 30天 = ¥14.7万</td>
+                </tr>
+                <tr>
+                    <td>食材成本（约42%）</td>
+                    <td>¥6.2万</td>
+                </tr>
+                <tr>
+                    <td>人工（4人，含社保）</td>
+                    <td>¥2.8万</td>
+                </tr>
+                <tr>
+                    <td>房租/物业</td>
+                    <td>¥1.2万</td>
+                </tr>
+                <tr>
+                    <td>水电燃气</td>
+                    <td>¥0.6万</td>
+                </tr>
+                <tr>
+                    <td>外卖平台抽成/营销费</td>
+                    <td>¥1.0万</td>
+                </tr>
+                <tr>
+                    <td>折旧/损耗预留</td>
+                    <td>¥0.5万</td>
+                </tr>
+                <tr style="border-top:2px solid rgba(180,120,60,0.3)">
+                    <td><strong>月净利润</strong></td>
+                    <td style="color:#66bb6a;font-weight:bold">约 ¥2.4 万（利润率16%）</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top:15px">📌 预期<strong>第4个月开始稳定盈利</strong>，前3个月允许微亏或持平作为爬坡期。</p>
+    </div>
+</section>
+
 <section class="section" id="risk">
     <div class="section-header">
-        <div class="num">11</div>
+        <div class="num">14</div>
         <h2>风险预案 · 未雨绸缪</h2>
         <p>Risk Management</p>
         <div class="divider"></div>
@@ -1121,81 +1095,64 @@
                 <td>鲜鹅供应不稳定</td>
                 <td><span class="badge badge-orange">中</span></td>
                 <td><span class="badge badge-red">高</span></td>
-                <td>提前备2个供应商，每天报需求量</td>
+                <td>提前备案4家供应商，48小时切换机制</td>
             </tr>
             <tr>
                 <td>开业客流爆满出餐慢</td>
                 <td><span class="badge badge-orange">中</span></td>
                 <td><span class="badge badge-orange">中</span></td>
-                <td>提前备菜、鹅提前炖好，高峰期只加热</td>
+                <td>鹅提前炖好，高峰期只加热上桌</td>
             </tr>
             <tr>
                 <td>外摆区天气影响</td>
                 <td><span class="badge badge-orange">中</span></td>
                 <td><span class="badge badge-green">低</span></td>
-                <td>备遮阳棚/防风帘，下雨天引导至堂食</td>
+                <td>备遮阳棚/防风帘，雨天引导至堂食</td>
             </tr>
             <tr>
                 <td>差评集中爆发</td>
                 <td><span class="badge badge-green">低</span></td>
                 <td><span class="badge badge-orange">中</span></td>
-                <td>开业前收集30条好评打底，差评24小时内回复+整改</td>
+                <td>30分钟内响应，不辩解先致歉+私信补偿</td>
             </tr>
             <tr>
-                <td>库存积压（鹅买多了）</td>
+                <td>库存积压</td>
                 <td><span class="badge badge-orange">中</span></td>
                 <td><span class="badge badge-orange">中</span></td>
-                <td>美团收银系统库存预警 → 适时做"今日特价"清库存</td>
+                <td>收银系统库存预警→"今日特价"清库存→员工餐消化</td>
+            </tr>
+            <tr>
+                <td>食品经营许可卡住</td>
+                <td><span class="badge badge-orange">中</span></td>
+                <td><span class="badge badge-red">高</span></td>
+                <td>提前咨询代办中介，准备全套材料递件，预留20天审批期</td>
             </tr>
         </tbody>
     </table>
 </section>
 
-<!-- 低谷应对 -->
-<section class="section">
-    <div class="section-header">
-        <div class="num">12</div>
-        <h2>低谷时段 · 提升平效</h2>
-        <p>Off-peak Strategy</p>
-        <div class="divider"></div>
-    </div>
-
-    <div class="content-card">
-        <h3><span class="icon">⏰</span> 分时段策略</h3>
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>时段</th>
-                    <th>策略</th>
-                    <th>产品</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>14:00-16:30</strong></td>
-                    <td>下午茶/简餐</td>
-                    <td>鹅油拌饭+卤味拼盘套餐 ¥28</td>
-                </tr>
-                <tr>
-                    <td><strong>21:00-23:00</strong></td>
-                    <td>外摆夜宵档</td>
-                    <td>啤酒买一送一+卤味下酒</td>
-                </tr>
-                <tr>
-                    <td><strong>工作日中午</strong></td>
-                    <td>周边上班族套餐</td>
-                    <td>烟火炒鸡单人套餐 ¥38（含米饭+酸梅汤）</td>
-                </tr>
-            </tbody>
-        </table>
+<section class="section" style="padding-top:0;padding-bottom:40px">
+    <div class="content-card" style="text-align:center;border-color:rgba(180,120,60,0.2)">
+        <h3><span class="icon">✅</span> 原方案保留亮点（无需修改）</h3>
+        <div class="two-col" style="margin-top:15px;text-align:left">
+            <ul>
+                <li>美团智能收银全链路</li>
+                <li>分时段运营思路</li>
+                <li>风险预案框架</li>
+            </ul>
+            <ul>
+                <li>"每日估清"实时同步</li>
+                <li>社群运营+会员储值</li>
+                <li>"不冷冻不过夜不凑合"品牌铁律</li>
+            </ul>
+        </div>
     </div>
 </section>
 
-<!-- Footer -->
 <section class="footer">
-    <p>— 白家老鹅坊 · 全案运营方案 —</p>
+    <p>— 白家老鹅坊 · 全案运营方案（修订合规版 V2.0）—</p>
     <p><strong>策划：苏苏</strong> · 美团智能版收银系统 · 助力餐饮数字化</p>
-    <p style="margin-top:10px;font-size:0.75rem">塘沽 · 杭州道 · 福建北路15-1-501号</p>
+    <p style="margin-top:10px;font-size:0.75rem">塘沽 · 杭州道 · 福建北路商业底商</p>
 </section>
 
 </body>
